@@ -6,7 +6,7 @@ module.exports = {
     require("./techbase");
     database.db().techbase.sync({ force: false }).then(() => {
       logger.info('Resync techbase data model and do not drop any data');
-      // require('app/model/techbase/seed');
+      require('app/model/techbase/seed');
     });
   }
 }

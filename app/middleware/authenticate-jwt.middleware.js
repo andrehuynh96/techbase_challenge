@@ -1,5 +1,5 @@
 const config = require("app/config");
-const key = require('app/lib/staking-api/key');
+const key = require('app/lib/api-key/key');
 
 module.exports = async function (req, res, next) {
   let token = req.headers["x-access-token"] || req.headers["authorization"];

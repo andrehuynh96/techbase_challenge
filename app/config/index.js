@@ -51,6 +51,7 @@ const config = {
     buildNumber: process.env.BUILD_NUMBER || process.env.CI_JOB_ID || '',
     port: parseInt(process.env.PORT || process.env.APP_PORT),
   },
+  enableSeed: process.env.ENABLE_SEED == 1 || 0
 };
 
 module.exports = config;
