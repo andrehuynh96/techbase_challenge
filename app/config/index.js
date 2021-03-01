@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const pkg = require('../../package.json');
 const logFolder = process.env.LOG_FOLDER || './public/logs';
+const fs = require("fs");
 
 const config = {
   logger: {
@@ -51,7 +52,21 @@ const config = {
     buildNumber: process.env.BUILD_NUMBER || process.env.CI_JOB_ID || '',
     port: parseInt(process.env.PORT || process.env.APP_PORT),
   },
-  enableSeed: process.env.ENABLE_SEED == 1 || 0
+  token: {
+    key: {
+      private: fs.readFileSync(__dirname + "../../lib/api-key/private.key", "utf8"),
+      public: fs.readFileSync(__dirname + "../../lib/api-key/public.key", "utf8")
+    },
+    signOption: {
+      issuer: process.env.TOKEN_SIGN_I || "Techbase",
+      subject: process.env.TOKEN_SIGN_S || "info@techbase.io",
+      audience: process.env.TOKEN_SIGN_A || "https://www.techbasevn.com/",
+      expiresIn: process.env.TOKEN_EXPIRES_IN ? parseInt(process.env.TOKEN_EXPIRES_IN) : 84600,
+      algorithm: "RS256"
+    },
+    refreshTokenExpiresIn: process.env.REFRESH_TOKEN_EXPIRES_IN ? parseInt(process.env.REFRESH_TOKEN_EXPIRES_IN) : 84600,
+  },
+  enableSeed: process.env.ENABLE_SEED == 1 || 0,
 };
 
 module.exports = config;
