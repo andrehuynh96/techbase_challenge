@@ -22,10 +22,7 @@ Project for apply BE position TechBaseVN
 |   |-- middleware/
 |   |   |-- validator.middleware.js
 |   |-- model/
-|   |   |-- user.js
-|-- scripts
-|  |-- preinstall.js                    # Run before npm install
-|  |-- postinstall.js                   # Run after npm install
+|   |   |-- user.js                 # Run after npm install
 |-- package.json
 |-- package-lock.json
 |-- index.js
@@ -60,14 +57,14 @@ npm instal
 
 ### Run
 ```
-node index.js
+npm start
 ```
 - Default server will be started at http://127.0.0.1:3001
 
 
 ### Testing
 ```
-node run test
+mocha path/test.spec
 ```
 # Migration
 When you want to change DB then you have to create migration file.
