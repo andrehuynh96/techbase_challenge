@@ -13,10 +13,10 @@ describe('techbase challenge', function () {
         setTimeout(done, 3000)
     });
 
-    describe('/departments', () => {
+    describe('/teams', () => {
       it('it should set authorization', (done) => {
         chai.request(server)
-          .get('/web/departments')
+          .get('/web/teams')
           .set("Authorization", "Bearer " + token)
           .end((err, res) => {
             console.log(res.body)
@@ -27,10 +27,10 @@ describe('techbase challenge', function () {
       });
     });
 
-    describe('/department', () => {
+    describe('/teams', () => {
       it('it should set authorization', (done) => {
         chai.request(server)
-          .get('/web/departments/34')
+          .get('/web/teams/6')
           .set("Authorization", "Bearer " + token)
           .end((err, res) => {
             console.log(res.body)
