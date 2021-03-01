@@ -1,0 +1,53 @@
+{
+  "name": "techbase_challenge",
+  "version": "1.0.0",
+  "description": "exam to apply BE TechBase VN",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huynhngocmyibl/techbase_challenge.git"
+  },
+  "keywords": [
+    "challenge",
+    "test",
+    "exam",
+    "node",
+    "js"
+  ],
+  "author": "myhn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huynhngocmyibl/techbase_challenge/issues"
+  },
+  "homepage": "https://github.com/huynhngocmyibl/techbase_challenge#readme",
+  "dependencies": {
+    "connect-redis": "^4.0.4",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "express-rate-limit": "^5.0.0",
+    "express-session": "^1.17.0",
+    "helmet": "^3.21.2",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^1.7.0",
+    "log4js": "^6.1.1",
+    "morgan": "~1.9.1",
+    "pg": "^7.18.1",
+    "pg-hstore": "^2.3.3",
+    "redis": "^3.0.2",
+    "rootpath": "^0.1.2",
+    "sequelize": "^5.22.3",
+    "sequelize-cli": "^5.5.1",
+    "sequelize-temporal": "^1.0.8",
+    "sequelize-temporalize": "^4.1.0",
+    "uuid": "^7.0.3"
+  }
+}
