@@ -22,9 +22,15 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: false
     },
   }, {
-      underscored: true,
-      timestamps: true,
+    underscored: true,
+    timestamps: true,
+  });
+  Department.associate = (models) => {
+    Department.hasOne(models.employees, {
+      as: 'Employees',
+      foreignKey: 'department_id',
+      source: 'id'
     });
-
-    return Department;
+  }
+  return Department;
 }
