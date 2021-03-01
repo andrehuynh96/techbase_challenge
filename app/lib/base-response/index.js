@@ -37,7 +37,6 @@ function infBaseResponse(req, res, next) {
 
     res.serverInternalError = (message = "Server Internal Error", code = "", data = {}) => {
       if (message == "Server Internal Error") {
-        message = res.__('SERVER_ERROR');
         code = "SERVER_ERROR";
       }
 
@@ -50,7 +49,6 @@ function infBaseResponse(req, res, next) {
 
     res.unauthorized = (message = "Unauthorized", code = "", data = {}) => {
       if (message == "Unauthorized") {
-        message = res.__('UNAUTHORIZED');
         code = "UNAUTHORIZED";
       }
       failure(message, 401, code, data);
