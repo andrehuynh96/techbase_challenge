@@ -26,6 +26,12 @@ module.exports = (sequelize, DataTypes) => {
       underscored: true,
       timestamps: true,
     });
-
+    Employee.associate = (models) => {
+      Employee.belongsTo(models.departments, {
+        as: 'Departments',
+        foreignKey: 'department_id',
+        targetKey: 'id'
+      });
+    }
     return Employee;
 }

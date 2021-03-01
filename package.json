@@ -49,5 +49,10 @@
     "sequelize-temporal": "^1.0.8",
     "sequelize-temporalize": "^4.1.0",
     "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.2"
   }
 }
